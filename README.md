@@ -15,7 +15,7 @@ This game is based on OOP. It have many different Classes to represent different
 - World
 - Character
 - Background
-- Obstacle
+- Obstacle(Chickens)
 - Coin
 - Endboss
 - Statusbars(Healthbar, Saucebar, Coinbar)
