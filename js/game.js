@@ -41,7 +41,7 @@ function startGame() {
   world = new World(canvas, keyboard);
   setTimeout(() => {
     addMenuButtons();
-    if (window.innerHeight < 450) {
+    if (window.innerHeight < 768) {
       document.getElementById("hud").classList.add("d-flex");
       document.getElementById("hud").classList.remove("d-none");
     }

@@ -6,8 +6,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: 'zabars', Arial, Helvetica, sans-serif;
-  background-image: url('img/background_dessert.jpg');
+  font-family: "zabars", Arial, Helvetica, sans-serif;
+  background-image: url("img/background_dessert.jpg");
   background-size: cover;
   background-position: contain;
   background-position: center;
@@ -31,7 +31,6 @@ body {
 
 .mobile-phone-warning {
   display: none;
-
 }
 
 p {
@@ -101,7 +100,7 @@ h2 {
 
 canvas {
   display: block;
-  border-radius: 10px;    
+  border-radius: 10px;
 }
 
 button {
@@ -115,10 +114,10 @@ button {
   border: none;
   cursor: pointer;
   z-index: 100;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: 70px;
   height: 30px;
-  font-family: 'zabars';
+  font-family: "zabars";
 }
 
 button:hover {
@@ -127,7 +126,7 @@ button:hover {
 }
 
 #startContainer {
-  background-image: url('img/9_intro_outro_screens/start/startscreen_2.png');
+  background-image: url("img/9_intro_outro_screens/start/startscreen_2.png");
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -151,7 +150,7 @@ button:hover {
 }
 
 #startButton:hover {
-  background-color:hsla(115, 100%, 51%, 0.774);
+  background-color: hsla(115, 100%, 51%, 0.774);
   transform: scale(1.1);
 }
 
@@ -164,7 +163,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
 
 .menuButtonLine {
   position: absolute;
@@ -202,7 +200,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  color: #2196F3;
+  color: #2196f3;
 }
 
 #hud button {
@@ -211,13 +209,11 @@ button:hover {
   width: 45px;
   height: 45px;
   user-select: none;
-  
 }
 
 .throw {
   transform: rotate(40deg);
 }
-
 
 .gameMenuButtonLine {
   position: absolute;
@@ -244,7 +240,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu {
@@ -253,7 +249,7 @@ button:hover {
   padding: 16px;
   border-radius: 15px;
   box-shadow: 0px 0px 8px 0px black;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu p {
@@ -309,7 +305,7 @@ button:hover {
   padding: 16px;
   border-radius: 15px;
   box-shadow: 0px 0px 8px 0px black;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .switch {
@@ -333,8 +329,8 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -345,19 +341,19 @@ button:hover {
   left: 4px;
   bottom: 2px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
@@ -370,6 +366,3 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-
-

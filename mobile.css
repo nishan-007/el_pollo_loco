@@ -18,7 +18,7 @@
   .menuButtonLine {
     margin-bottom: 20px;
   }
-/* 
+  /* 
   #hud {
     display: flex;
   } */
@@ -180,9 +180,6 @@
   .controlImage {
     width: 20px;
     height: 20px;
-  }
-  .bottom-link {
-    display: none;
   }
 }
 
