@@ -1,0 +1,294 @@
+/* Responsive */
+
+@media (max-width: 1000px) {
+  h1 {
+    display: none;
+  }
+  .container {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .startButtonLine {
+    margin-top: 30px;
+  }
+
+  .menuButtonLine {
+    margin-bottom: 20px;
+  }
+/* 
+  #hud {
+    display: flex;
+  } */
+
+  h2 {
+    margin: 10px;
+  }
+
+  .infoText span {
+    padding: 10px;
+  }
+
+  #settingsButton {
+    height: 35px;
+    width: 75px;
+  }
+
+  #fullscreenButton {
+    height: 35px;
+    width: 75px;
+  }
+
+  #controlButton {
+    height: 35px;
+    width: 75px;
+  }
+
+  #restartGame {
+    height: 35px;
+    width: 75px;
+    display: none;
+  }
+
+  #settingsButton img {
+    width: 28px;
+    height: 28px;
+  }
+
+  #fullscreenButton img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .bottomButtonLine {
+    bottom: 0;
+  }
+
+  .topButtonLine {
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    padding: 8px;
+  }
+
+  .closeMenu {
+    margin: 0;
+  }
+
+  #hud img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #hud button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .gameMenuButtonLine {
+    top: -12px;
+  }
+  h2 {
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .bottomButtonLine {
+    bottom: -8px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .controlImage {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #settingsButton {
+    height: 30px;
+    width: 45px;
+  }
+
+  #fullscreenButton {
+    height: 30px;
+    width: 45px;
+  }
+
+  #controlButton {
+    height: 30px;
+    width: 45px;
+  }
+
+  #restartGame {
+    height: 30px;
+    width: 45px;
+  }
+
+  #settingsButton img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #fullscreenButton img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #controlButton img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .bottomButtonLine {
+    bottom: -12px;
+  }
+
+  .topButtonLine {
+    top: -8px;
+  }
+}
+
+@media only screen and (max-height: 480px) {
+  canvas {
+    height: 100vh;
+  }
+
+  .container {
+    height: 100vh;
+    width: auto;
+  }
+
+  .menu {
+    padding: 8px;
+  }
+
+  .controlImage {
+    width: 20px;
+    height: 20px;
+  }
+  .bottom-link {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .topButtonLine {
+    top: 0px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  #settingsButton {
+    height: 35px;
+    width: 75px;
+  }
+
+  #infoButton {
+    display: none;
+  }
+
+  #controlButton {
+    height: 35px;
+    width: 75px;
+  }
+
+  #restartGame {
+    height: 35px;
+    width: 75px;
+  }
+
+  #settingsButton img {
+    width: 28px;
+    height: 28px;
+  }
+
+  #fullscreenButton img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .bottomButtonLine {
+    bottom: -8px;
+  }
+}
+
+@media only screen and (max-height: 380px) {
+  .closeMenu {
+    margin: 0;
+  }
+
+  #hud img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #hud button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gameMenuButtonLine {
+    top: -12px;
+  }
+}
+
+@media only screen and (max-height: 320px) {
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (pointer: coarse) {
+  .controlImageTouch {
+    display: block;
+  }
+}
+
+@media not (pointer: coarse) {
+  .controlImage {
+    display: block;
+  }
+}
+
+@media (max-width: 740px) and (orientation: portrait) {
+  #canvas {
+    width: 100%;
+    height: 100vh;
+  }
+  .bottom-link {
+    display: none;
+  }
+  .mobile-phone-warning {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 3);
+    inset: 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 101;
+    margin: 0px;
+  }
+  .mobile-phone-warning > p {
+    font-size: 32px;
+    color: rgb(148, 0, 0);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+}

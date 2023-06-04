@@ -4,28 +4,214 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Pollo Loco</title>
+    <title>EL POLLO LOCO</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <script src="models/draw-world.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/moveable-object.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/statusbar_object.class.js"></script>
+    <script src="models/statusbar_health.class.js"></script>
+    <script src="models/statusbar_endboss.class.js"></script>
+    <script src="models/statusbar_coin.class.js"></script>
+    <script src="models/statusbar_bottle.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/baby_chicken.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/coin.class.js"></script>
+    <script src="models/bottle.class.js"></script>
+    <script src="models/bottle-splash.class.js"></script>
+    <script src="models/heart.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="models/dead-chicken.class.js"></script>
+    <script src="models/dead_baby_chicken.class.js"></script>
+    <script src="models/endscreen.class.js"></script>
+    <script src="js/game.js"></script>
+    <script src="levels/level1.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
   </head>
+
   <body onload="init()">
     <h1>El Pollo Loco</h1>
-    <canvas id="canvas" width="720px" height="480px"></canvas>
-    <!-- Scripts -->
-    <script src="./modals/drawable-object.class.js"></script>
-    <script src="./modals/movable-object.class.js"></script>
-    <script src="./modals/throwable-object.class.js"></script>
-    <script src="./modals/character.class.js"></script>
-    <script src="./modals/chicken.class.js"></script>
-    <script src="./modals/world.class.js"></script>
-    <script src="./modals/clouds.class.js"></script>
-    <script src="./modals/background.class.js"></script>
-    <script src="./modals/keyboard.class.js"></script>
-    <script src="./modals/level.class.js"></script>
-    <script src="./modals/endboss.class.js"></script>
-    <script src="./modals/bottles.class.js"></script>
-    <script src="./modals/coins.class.js"></script>
-    <script src="./modals/statusbar.class.js"></script>
-    <script src="./levels/level.js"></script>
-    <script src="./js/game.js"></script>
+    <div class="mobile-phone-warning">
+      <p>
+        Please turn around <br />
+        your mobile phone
+      </p>
+    </div>
+    <div class="container" id="container">
+      <div id="startContainer">
+        <div class="startButtonLine">
+          <button id="startButton" onclick="startGame()">Start Game</button>
+        </div>
+      </div>
+
+      <!------------------------------Menu---------------------------------------------->
+
+      <div class="menuButtonLine" id="menuButtonLine">
+        <button id="settingsButton" class="menuButton" onclick="settings()">
+          <img src="./img/settings.png" />
+        </button>
+
+        <button id="controlButton" class="menuButton" onclick="control()">
+          <img src="./img/games.png" />
+        </button>
+
+        <button id="infoButton" class="menuButton">
+          <img src="./img/info.png" onclick="info()" />
+        </button>
+
+        <button id="fullscreenButton" class="menuButton" onclick="fullscreen()">
+          <img src="./img/fullscreen.png" />
+        </button>
+
+        <button
+          id="restartGame"
+          class="menuButton"
+          onclick="goBackToStartScreen()"
+        >
+          <img src="./img/restartGame.png" />
+        </button>
+      </div>
+
+      <!------------------------------Settings---------------------------------------------->
+
+      <div
+        onclick="closeMenu()"
+        id="settingsMenu"
+        class="background d-none vis-hidden"
+      >
+        <div onclick="doNotClose(event)" id="settings" class="menu">
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Sound</p>
+            <label class="switch">
+              <input onclick="soundOn()" id="soundToggle" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Music</p>
+            <label class="switch">
+              <input type="checkbox" id="musicToggle" onclick="musicOn()" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="closeMenu">
+            <button id="closeButton" onclick="closeMenu()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------Control---------------------------------------------->
+
+      <div
+        onclick="closeMenu()"
+        id="controlMenu"
+        class="background d-none vis-hidden"
+      >
+        <div onclick="doNotClose(event)" id="control" class="menu">
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Move right</p>
+            <img class="controlImage d-none" src="./img/right-arrow.png" />
+            <img class="controlImageTouch d-none" src="./img/right-arrow.png" />
+          </div>
+
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Move Left</p>
+            <img class="controlImage d-none" src="./img/left-arrow.png" />
+            <img class="controlImageTouch d-none" src="./img/left-arrow.png" />
+          </div>
+
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Jump</p>
+            <img class="controlImage d-none" src="./img/space.png" />
+            <img class="controlImageTouch d-none" src="img/up-arrow.png" />
+          </div>
+
+          <div class="d-flex alignCenter spaceBetween">
+            <p>Throw Weapon</p>
+            <img class="controlImage d-none" src="./img/f.png" />
+            <img class="controlImageTouch d-none" src="./img/f.png" />
+          </div>
+
+          <div class="closeMenu">
+            <button id="menuButton" onclick="closeMenu()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-----------------------------Info-------------------------------------------->
+
+      <div
+        onclick="closeMenu()"
+        id="infoMenu"
+        class="background d-none vis-hidden"
+      >
+        <div onclick="doNotClose(event)" id="info" class="info">
+          <div class="infoText">
+            <h2>Game Description</h2>
+            <span
+              >Jump on the little chickens to defeat the them. Collect the spicy
+              bottles and throw them on the big chicken to beat it. Beware, they
+              are limited! On your way you can collect coins.</span
+            >
+          </div>
+          <div class="closeMenu">
+            <button id="menuButton" onclick="closeMenu()">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <canvas id="canvas" width="720" height="480"></canvas>
+
+      <div id="hud" class="hud d-none">
+        <div class="panel d-flex alignCenter spaceBetween">
+          <button
+            id="btnLeft"
+            ontouchstart="world.keyboard.moveLeftstart()"
+            ontouchend="world.keyboard.moveLeftstop()"
+          >
+            <img src="./img/left-arrow.png" />
+          </button>
+          <button
+            id="btnJump"
+            ontouchstart="world.keyboard.jumpStart() "
+            ontouchend="world.keyboard.jumpStop()"
+          >
+            <img src="./img/up-arrow.png" />
+          </button>
+        </div>
+        <div class="panel d-flex alignCenter spaceBetween">
+          <button
+            id="btnThrow"
+            ontouchstart="world.keyboard.throwBottlestart()"
+            ontouchend="world.keyboard.throwBottlestop()"
+          >
+            <img class="throw" src="./img/f.png" />
+          </button>
+
+          <button
+            id="btnRight"
+            ontouchstart="world.keyboard.moveRightstart()"
+            ontouchend="world.keyboard.moveRightstop()"
+          >
+            <img src="./img/right-arrow.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <a
+      id="legal-notice-link"
+      class="bottom-link"
+      href="./pages/legal_notice.html"
+      ><b>Legal Notice</b></a
+    >
   </body>
 </html>
