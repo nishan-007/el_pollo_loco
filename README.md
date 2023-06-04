@@ -5,7 +5,7 @@ It is game about a Character that has to collect coins and avoid obstacles. The 
 At the end, the Character encounters a boss and has to defeat it to win the game.
 
 ## MVP (DOM - CANVAS)
-CANVAS, This game has a character that can move up, down, left and right. The character has to collect coins and avoid obstacles. Play [now](https://el-pollo-loco.nishan-singh.com)!
+CANVAS, This game has a character that can move up, down, left and right. The character has to collect coins and avoid obstacles. Play [now!](https://el-pollo-loco.nishan-singh.com)
 
 
 ## Object-Oriented Programming (OOP)
